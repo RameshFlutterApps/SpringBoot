@@ -22,16 +22,24 @@ A Spring Boot CRUD (Create, Read, Update, Delete) operation sample demonstrating
 
    # Retrieving Data (GET Request)
    - To retrieve data from a server, you use the GET method. This is typically used for reading resources or querying data.
+     
+     ![Get the data from the database](https://github.com/RameshFlutterApps/SpringBoot/blob/master/Get.jpg)
       
    # Sending Data (POST Request)
    - To send data to a server, you typically use the POST method. This is useful when creating new resources on a server, such as adding a new record to a database.
+     
+      ![Send the data from the database](https://github.com/RameshFlutterApps/SpringBoot/blob/master/Post.jpg)
       
    # Updating Data (PUT/PATCH Request)
      To update data, you use the PUT or PATCH method.
    - PUT replaces the entire resource.
    - PATCH is used for partial updates.
+     
+     ![Update data into the database](https://github.com/RameshFlutterApps/SpringBoot/blob/master/Put.jpg)
   
    # Deleting Data (DELETE Request)
   - The DELETE method is used to remove a resource from the server.
+    
+     ![Update data into the database](https://github.com/RameshFlutterApps/SpringBoot/blob/master/Delete.jpg)
 
      
