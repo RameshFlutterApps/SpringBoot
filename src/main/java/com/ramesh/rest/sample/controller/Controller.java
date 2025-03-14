@@ -44,13 +44,13 @@ public class Controller {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/todos")
+    @PostMapping("/messages")
     public ResponseEntity<Object> addTodo(@Valid @RequestBody MessageDTO dto) {
         this.repository.save(new MessageEntity(null, dto.getMessage(), false));
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/todos/{id}")
+    @PutMapping("/message/{id}")
     public ResponseEntity<Object> updateTodo(@PathVariable Long id, @Valid @RequestBody MessageDTO dto) {
         return this.repository.findById(id)
                 .map(messageEntity -> {
@@ -61,29 +61,29 @@ public class Controller {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/todos/{id}/mark_completed")
+    @PutMapping("/message/{id}/mark_completed")
     public ResponseEntity<Object> markCompleted(@PathVariable Long id) {
         return this.repository.findById(id)
                 .map(todo -> {
-//                    todo.setCompleted(true);
+                    todo.setCompleted(true);
                     this.repository.save(todo);
                     return ResponseEntity.ok().build();
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/todos/{id}/mark_incomplete")
+    @PutMapping("/message/{id}/mark_incomplete")
     public ResponseEntity<Object> markIncomplete(@PathVariable Long id) {
         return this.repository.findById(id)
                 .map(todo -> {
-//                    todo.setCompleted(false);
+                    todo.setCompleted(false);
                     this.repository.save(todo);
                     return ResponseEntity.ok().build();
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/todos/{id}")
+    @DeleteMapping("/message/{id}")
     public ResponseEntity<Object> delete(@PathVariable Long id) {
         return this.repository.findById(id)
                 .map(todo -> {
