@@ -22,7 +22,6 @@ A Spring Boot CRUD (Create, Read, Update, Delete) operation sample demonstrating
 
    # Retrieving Data (GET Request)
    - To retrieve data from a server, you use the GET method. This is typically used for reading resources or querying data.
-   - 
       
    # Sending Data (POST Request)
    - To send data to a server, you typically use the POST method. This is useful when creating new resources on a server, such as adding a new record to a database.
